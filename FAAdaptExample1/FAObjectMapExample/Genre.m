@@ -1,13 +1,13 @@
 //
-//  FAObjectMap.m
-//  FAObjectMap
+//  Genre.m
+//  FAObjectMapExample
 //
 //  Created by Rasmus Kildevaeld on 05/11/14.
 //  Copyright (c) 2014 Rasmus Kildevaeld. All rights reserved.
 //
 
-#import "FAObjectMap.h"
+#import "Genre.h"
 
-@implementation FAObjectMap
+@implementation Genre
 
 @end

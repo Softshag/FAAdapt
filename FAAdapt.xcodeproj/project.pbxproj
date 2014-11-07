@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1295471A09FCA1000A6D63 /* FAObjectMap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A1295461A09FCA1000A6D63 /* FAObjectMap.h */; };
-		3A1295491A09FCA1000A6D63 /* FAObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1295481A09FCA1000A6D63 /* FAObjectMap.m */; };
-		3A12954F1A09FCA1000A6D63 /* libFAObjectMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1295431A09FCA1000A6D63 /* libFAObjectMap.a */; };
+		3A12954F1A09FCA1000A6D63 /* libFAAdapt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1295431A09FCA1000A6D63 /* libFAAdapt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,18 +27,15 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				3A1295471A09FCA1000A6D63 /* FAObjectMap.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3A1295431A09FCA1000A6D63 /* libFAObjectMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFAObjectMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A1295461A09FCA1000A6D63 /* FAObjectMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAObjectMap.h; sourceTree = "<group>"; };
-		3A1295481A09FCA1000A6D63 /* FAObjectMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAObjectMap.m; sourceTree = "<group>"; };
-		3A12954E1A09FCA1000A6D63 /* FAObjectMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FAObjectMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A1295541A09FCA1000A6D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1295431A09FCA1000A6D63 /* libFAAdapt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFAAdapt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A12954E1A09FCA1000A6D63 /* FAAdaptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FAAdaptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9CA1441A0C546A0016860E /* FAAdapt.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FAAdapt.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A12954F1A09FCA1000A6D63 /* libFAObjectMap.a in Frameworks */,
+				3A12954F1A09FCA1000A6D63 /* libFAAdapt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +60,7 @@
 		3A12953A1A09FCA1000A6D63 = {
 			isa = PBXGroup;
 			children = (
-				3A1295451A09FCA1000A6D63 /* FAObjectMap */,
-				3A1295521A09FCA1000A6D63 /* FAObjectMapTests */,
+				3A9CA1441A0C546A0016860E /* FAAdapt.podspec */,
 				3A1295441A09FCA1000A6D63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,43 +68,18 @@
 		3A1295441A09FCA1000A6D63 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A1295431A09FCA1000A6D63 /* libFAObjectMap.a */,
-				3A12954E1A09FCA1000A6D63 /* FAObjectMapTests.xctest */,
+				3A1295431A09FCA1000A6D63 /* libFAAdapt.a */,
+				3A12954E1A09FCA1000A6D63 /* FAAdaptTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3A1295451A09FCA1000A6D63 /* FAObjectMap */ = {
-			isa = PBXGroup;
-			children = (
-				3A1295461A09FCA1000A6D63 /* FAObjectMap.h */,
-				3A1295481A09FCA1000A6D63 /* FAObjectMap.m */,
-			);
-			path = FAObjectMap;
-			sourceTree = "<group>";
-		};
-		3A1295521A09FCA1000A6D63 /* FAObjectMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				3A1295531A09FCA1000A6D63 /* Supporting Files */,
-			);
-			path = FAObjectMapTests;
-			sourceTree = "<group>";
-		};
-		3A1295531A09FCA1000A6D63 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3A1295541A09FCA1000A6D63 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A1295421A09FCA1000A6D63 /* FAObjectMap */ = {
+		3A1295421A09FCA1000A6D63 /* FAAdapt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A1295571A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAObjectMap" */;
+			buildConfigurationList = 3A1295571A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAAdapt" */;
 			buildPhases = (
 				3A12953F1A09FCA1000A6D63 /* Sources */,
 				3A1295401A09FCA1000A6D63 /* Frameworks */,
@@ -120,14 +89,14 @@
 			);
 			dependencies = (
 			);
-			name = FAObjectMap;
+			name = FAAdapt;
 			productName = FAObjectMap;
-			productReference = 3A1295431A09FCA1000A6D63 /* libFAObjectMap.a */;
+			productReference = 3A1295431A09FCA1000A6D63 /* libFAAdapt.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3A12954D1A09FCA1000A6D63 /* FAObjectMapTests */ = {
+		3A12954D1A09FCA1000A6D63 /* FAAdaptTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A12955A1A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAObjectMapTests" */;
+			buildConfigurationList = 3A12955A1A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAAdaptTests" */;
 			buildPhases = (
 				3A12954A1A09FCA1000A6D63 /* Sources */,
 				3A12954B1A09FCA1000A6D63 /* Frameworks */,
@@ -138,9 +107,9 @@
 			dependencies = (
 				3A1295511A09FCA1000A6D63 /* PBXTargetDependency */,
 			);
-			name = FAObjectMapTests;
+			name = FAAdaptTests;
 			productName = FAObjectMapTests;
-			productReference = 3A12954E1A09FCA1000A6D63 /* FAObjectMapTests.xctest */;
+			productReference = 3A12954E1A09FCA1000A6D63 /* FAAdaptTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A12953E1A09FCA1000A6D63 /* Build configuration list for PBXProject "FAObjectMap" */;
+			buildConfigurationList = 3A12953E1A09FCA1000A6D63 /* Build configuration list for PBXProject "FAAdapt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,8 +141,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A1295421A09FCA1000A6D63 /* FAObjectMap */,
-				3A12954D1A09FCA1000A6D63 /* FAObjectMapTests */,
+				3A1295421A09FCA1000A6D63 /* FAAdapt */,
+				3A12954D1A09FCA1000A6D63 /* FAAdaptTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1295491A09FCA1000A6D63 /* FAObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +177,7 @@
 /* Begin PBXTargetDependency section */
 		3A1295511A09FCA1000A6D63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A1295421A09FCA1000A6D63 /* FAObjectMap */;
+			target = 3A1295421A09FCA1000A6D63 /* FAAdapt */;
 			targetProxy = 3A1295501A09FCA1000A6D63 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -292,18 +260,25 @@
 		3A1295581A09FCA1000A6D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAAdapt;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FAObjectMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3A1295591A09FCA1000A6D63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAAdapt;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FAObjectMap-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -320,7 +295,7 @@
 				);
 				INFOPLIST_FILE = FAObjectMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAAdaptTests;
 			};
 			name = Debug;
 		};
@@ -333,14 +308,14 @@
 				);
 				INFOPLIST_FILE = FAObjectMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FAAdaptTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A12953E1A09FCA1000A6D63 /* Build configuration list for PBXProject "FAObjectMap" */ = {
+		3A12953E1A09FCA1000A6D63 /* Build configuration list for PBXProject "FAAdapt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A1295551A09FCA1000A6D63 /* Debug */,
@@ -349,21 +324,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A1295571A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAObjectMap" */ = {
+		3A1295571A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAAdapt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A1295581A09FCA1000A6D63 /* Debug */,
 				3A1295591A09FCA1000A6D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		3A12955A1A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAObjectMapTests" */ = {
+		3A12955A1A09FCA1000A6D63 /* Build configuration list for PBXNativeTarget "FAAdaptTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A12955B1A09FCA1000A6D63 /* Debug */,
 				3A12955C1A09FCA1000A6D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

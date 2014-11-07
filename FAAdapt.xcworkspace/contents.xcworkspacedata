@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:FAAdaptExample/FAAdaptExample.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:FAAdapt"
+      name = "FAAdapt">
+      <FileRef
+         location = "group:FAAdaptPropertyFinder.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptPropertyFinder.m">
+      </FileRef>
+      <Group
+         location = "group:Categories"
+         name = "Categories">
+         <FileRef
+            location = "group:FAObjectDescription+Functions.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAObjectDescription+Functions.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:FAAdapt.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdapt.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptValueTransformer.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptValueTransformer.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAArrayDescription.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAArrayDescription.m">
+      </FileRef>
+      <FileRef
+         location = "group:FADescription.h">
+      </FileRef>
+      <FileRef
+         location = "group:FADescription.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAObjectDescription.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAObjectDescription.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAPropertyDescription.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAPropertyDescription.m">
+      </FileRef>
+      <FileRef
+         location = "group:RKValueTransformers.h">
+      </FileRef>
+      <FileRef
+         location = "group:RKValueTransformers.m">
+      </FileRef>
+   </Group>
+</Workspace>

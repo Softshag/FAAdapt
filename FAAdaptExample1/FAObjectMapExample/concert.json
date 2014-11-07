@@ -1,0 +1,80 @@
+{
+    "active": true,
+    "acts": [
+             {
+             "musicians": [
+                           {
+                           "instruments": [
+                                           "cn"
+                                           ],
+                           "name": "Mikael Zuschlag"
+                           },
+                           {
+                           "instruments": [
+                                           "cl",
+                                           "s"
+                                           ],
+                           "name": "Claus Forchhammer"
+                           },
+                           {
+                           "instruments": [
+                                           "tb"
+                                           ],
+                           "name": "Arne H\u00f8jbjerg"
+                           },
+                           {
+                           "instruments": [
+                                           "cn"
+                                           ],
+                           "name": "Peter Aller"
+                           },
+                           {
+                           "instruments": [
+                                           "bj"
+                                           ],
+                           "name": "John Neess"
+                           },
+                           {
+                           "instruments": [
+                                           "sou"
+                                           ],
+                           "name": "Leo Herchman"
+                           },
+                           {
+                           "instruments": [
+                                           "wb"
+                                           ],
+                           "name": "Mik Schack"
+                           }
+                           ],
+             "name": "Peruna Jazzmen"
+             }
+             ],
+    "club": null,
+    "description": "Klassisk jazz med st\u00e6dig k\u00e6rlighed til jazzen fra tyverne og trediverne. Et af de \u00e6ldste og mest originale jazz orkestre herhjemme. Oplev den fort\u00e6ttede stemning n\u00e5r kapelmester Arne H\u00f8jbjerg \u201dswinger\u201d basunen og nyd Anette Strauss dejlige inciterende stemme der f\u00e5r de \u00f8vrige musikere til at smelte sammen i en h\u00f8jere enhed. ",
+    "description_english": "Classic jazz from the 1920's.",
+    "facebook": null,
+    "festival": null,
+    "finish": 1415300400,
+    "free": true,
+    "genres": [
+               "Swing",
+               "Traditionel"
+               ],
+    "id": 10680,
+    "image": "https://s3-eu-west-1.amazonaws.com/softshag/croppings/33c7ce2402fff2c3728c7b577a7659609cf8391c.jpg",
+    "media": null,
+    "name": "Peruna Jazzmen",
+    "outdoor": false,
+    "price": null,
+    "selected": false,
+    "start": 1415289600,
+    "themes": [],
+    "ticket": null,
+    "updated_at": 1413973822,
+    "venue": {
+        "city": "K\u00f8benhavn K",
+        "country": "Danmark",
+        "name": "Charlie Scott's"
+    }
+}

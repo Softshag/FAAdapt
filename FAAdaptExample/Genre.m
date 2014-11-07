@@ -1,13 +1,13 @@
 //
-//  FAObjectMap.h
-//  FAObjectMap
+//  Genre.m
+//  FAObjectMapExample
 //
 //  Created by Rasmus Kildevaeld on 05/11/14.
 //  Copyright (c) 2014 Rasmus Kildevaeld. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Genre.h"
 
-@interface FAObjectMap : NSObject
+@implementation Genre
 
 @end
