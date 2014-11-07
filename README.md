@@ -5,6 +5,9 @@ Object mapper for objective-c
 
 
 ## Map Dictionary 
+
+**JSON** 
+
 ```javascript
 {
   "first_name" : "Billy",
@@ -16,11 +19,25 @@ Object mapper for objective-c
 
 ```
 
+**Object**
 
 ```objective-c
 
+@interface Person {
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) Address *address;
+
+}
+
+
+```
+
+**Adapt!**
+```objective-c
+
 FAObjectDescription *desc = AdaptObject(Person.class, @{
-  @"first_name" : @"firstNameProperty",
+  @"first_name" : @"name",
   @"addr": AdaptObject(Address.class, nil).mapUndefined(YES).map(@"address")
 });
 
