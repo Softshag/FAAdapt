@@ -61,4 +61,11 @@ NSString *kErrorDomain = @"com.adapt.object";
 }
 
 
+- (FADescription *(^)(BOOL required))required {
+    return ^(BOOL required) {
+        _isRequired = required;
+        return self;
+    };
+}
+
 @end

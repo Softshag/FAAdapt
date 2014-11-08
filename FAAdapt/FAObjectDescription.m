@@ -14,9 +14,9 @@
 
 @interface FAObjectDescription ()
 
-- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance;
+- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance error:(NSError **)error;
 
-- (BOOL)setValue:(id)value withPropertyMapping:(NSString *)map property:(NSString*)property onInstance:(id)instance;
+- (BOOL)setValue:(id)value withPropertyMapping:(NSString *)map property:(NSString*)property onInstance:(id)instance error:(NSError **)error;
 
 @end
 
@@ -114,7 +114,7 @@
         
         id<FADescription> desc = _descriptors[_descriptors.allKeys[0]];
     
-        [self setValue:_dictionary withDescriptor:desc property:nil onInstance:instance];
+        [self setValue:_dictionary withDescriptor:desc property:nil onInstance:instance error:error];
         
         return instance;
     }
@@ -123,23 +123,35 @@
     for (id property in dictionary.allKeys) {
         @autoreleasepool {
             
-            id value = dictionary[property];
-            id<FADescription> descriptor = [self getDescription:property];
+            id value = [dictionary valueForKeyPath:property];
             
+            id<FADescription> descriptor = [self getDescription:property];
+            NSError *innerError;
             // Does a descriptor exists for this property
             if (descriptor == nil) {
+                
                 // Should we try yo map any way
                 if (self.shouldMapUndefinedProperties) {
                     
-                    [self setValue:value withPropertyMapping:property property:property onInstance:instance];
+                    [self setValue:value withPropertyMapping:property property:property onInstance:instance error:&innerError];
                 } else {
                     continue;
                 }
-                
+               
             } else {
-                [self setValue:value withDescriptor:descriptor property:property onInstance:instance];
+                [self setValue:value withDescriptor:descriptor property:property onInstance:instance error:&innerError];
+                
+                
             }
+            
+            if (innerError != nil) {
+                *error = innerError;
+                break;
+            }
+            
+           
         }
+        
         
     }
     
@@ -147,13 +159,19 @@
 }
 
 
-- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance {
+- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance error:(NSError **)error {
     
-    NSError *error;
+    NSError *innerError;
     
-    id newValue = [descriptor mapValue:value error:&error];
+    id newValue = [descriptor mapValue:value error:&innerError];
 
-    if (error != nil) {
+    if (innerError != nil) {
+        *error = innerError;
+        return false;
+    }
+    
+    if (newValue == nil && descriptor.isRequired) {
+        *error = [NSError errorWithDomain:@"com.adapt.desriptor" code:2 userInfo:@{@"error": @"required",@"field":descriptor.property}];
         return false;
     }
     
@@ -163,7 +181,7 @@
     return true;
 }
 
-- (BOOL)setValue:(id)value withPropertyMapping:(NSString *)map property:(NSString*)property onInstance:(id)instance {
+- (BOOL)setValue:(id)value withPropertyMapping:(NSString *)map property:(NSString*)property onInstance:(id)instance error:(NSError **)error {
     
     if ([FAAdaptPropertyFinder hasProperty:map onClass:self.destinationClass]) {
         
@@ -171,7 +189,7 @@
         
         [self addDescription:desc forProperty:property]; // Cache
         
-        return [self setValue:value withDescriptor:desc property:property onInstance:instance];
+        return [self setValue:value withDescriptor:desc property:property onInstance:instance error:error];
     }
     
     return false;
