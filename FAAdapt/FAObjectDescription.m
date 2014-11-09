@@ -14,7 +14,7 @@
 
 @interface FAObjectDescription ()
 
-- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance error:(NSError **)error;
+
 
 - (BOOL)setValue:(id)value withPropertyMapping:(NSString *)map property:(NSString*)property onInstance:(id)instance error:(NSError **)error;
 

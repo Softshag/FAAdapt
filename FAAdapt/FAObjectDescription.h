@@ -39,4 +39,6 @@ typedef id (^createObjectBlock)(Class class, id value);
 
 - (id)createInstance:(NSDictionary *)value;
 
+- (BOOL)setValue:(id)value withDescriptor:(id<FADescription>)descriptor property:(NSString*)property onInstance:(id)instance error:(NSError **)error;
+
 @end
