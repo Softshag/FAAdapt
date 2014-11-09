@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2F84521A0F972D000BA744 /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F84501A0F972D000BA744 /* RKValueTransformers.m */; };
 		3A9CA1681A0C58D50016860E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1671A0C58D50016860E /* main.m */; };
 		3A9CA1771A0C59020016860E /* Act.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1701A0C59020016860E /* Act.m */; };
 		3A9CA1781A0C59020016860E /* Concert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1721A0C59020016860E /* Concert.m */; };
@@ -19,7 +20,6 @@
 		3A9CA1921A0C59C10016860E /* FADescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1861A0C59C10016860E /* FADescription.m */; };
 		3A9CA1931A0C59C10016860E /* FAObjectDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1881A0C59C10016860E /* FAObjectDescription.m */; };
 		3A9CA1941A0C59C10016860E /* FAPropertyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA18A1A0C59C10016860E /* FAPropertyDescription.m */; };
-		3A9CA1951A0C59C10016860E /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA18C1A0C59C10016860E /* RKValueTransformers.m */; };
 		3A9CA1981A0C5A840016860E /* FAAdaptPropertyFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1971A0C5A840016860E /* FAAdaptPropertyFinder.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A2F844F1A0F972D000BA744 /* RKValueTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKValueTransformers.h; sourceTree = "<group>"; };
+		3A2F84501A0F972D000BA744 /* RKValueTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKValueTransformers.m; sourceTree = "<group>"; };
 		3A9CA1641A0C58D50016860E /* FAAdaptExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FAAdaptExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9CA1671A0C58D50016860E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A9CA16F1A0C59020016860E /* Act.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Act.h; sourceTree = "<group>"; };
@@ -61,8 +63,6 @@
 		3A9CA1881A0C59C10016860E /* FAObjectDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAObjectDescription.m; sourceTree = "<group>"; };
 		3A9CA1891A0C59C10016860E /* FAPropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAPropertyDescription.h; sourceTree = "<group>"; };
 		3A9CA18A1A0C59C10016860E /* FAPropertyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAPropertyDescription.m; sourceTree = "<group>"; };
-		3A9CA18B1A0C59C10016860E /* RKValueTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKValueTransformers.h; sourceTree = "<group>"; };
-		3A9CA18C1A0C59C10016860E /* RKValueTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKValueTransformers.m; sourceTree = "<group>"; };
 		3A9CA1961A0C5A840016860E /* FAAdaptPropertyFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAdaptPropertyFinder.h; sourceTree = "<group>"; };
 		3A9CA1971A0C5A840016860E /* FAAdaptPropertyFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAdaptPropertyFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,9 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2F84511A0F972D000BA744 /* RKValueTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				3A2F844F1A0F972D000BA744 /* RKValueTransformers.h */,
+				3A2F84501A0F972D000BA744 /* RKValueTransformers.m */,
+			);
+			name = RKValueTransformers;
+			path = ../RKValueTransformers/Code;
+			sourceTree = "<group>";
+		};
 		3A9CA15B1A0C58D50016860E = {
 			isa = PBXGroup;
 			children = (
+				3A2F84511A0F972D000BA744 /* RKValueTransformers */,
 				3A9CA18D1A0C59C10016860E /* FAAdapt */,
 				3A9CA17B1A0C59100016860E /* concert.json */,
 				3A9CA16E1A0C58F80016860E /* Models */,
@@ -147,8 +158,6 @@
 				3A9CA1881A0C59C10016860E /* FAObjectDescription.m */,
 				3A9CA1891A0C59C10016860E /* FAPropertyDescription.h */,
 				3A9CA18A1A0C59C10016860E /* FAPropertyDescription.m */,
-				3A9CA18B1A0C59C10016860E /* RKValueTransformers.h */,
-				3A9CA18C1A0C59C10016860E /* RKValueTransformers.m */,
 			);
 			name = FAAdapt;
 			path = ../FAAdapt;
@@ -215,11 +224,11 @@
 				3A9CA1911A0C59C10016860E /* FAArrayDescription.m in Sources */,
 				3A9CA1941A0C59C10016860E /* FAPropertyDescription.m in Sources */,
 				3A9CA18E1A0C59C10016860E /* FAObjectDescription+Functions.m in Sources */,
-				3A9CA1951A0C59C10016860E /* RKValueTransformers.m in Sources */,
 				3A9CA18F1A0C59C10016860E /* FAAdapt.m in Sources */,
 				3A9CA1771A0C59020016860E /* Act.m in Sources */,
 				3A9CA1781A0C59020016860E /* Concert.m in Sources */,
 				3A9CA1681A0C58D50016860E /* main.m in Sources */,
+				3A2F84521A0F972D000BA744 /* RKValueTransformers.m in Sources */,
 				3A9CA1901A0C59C10016860E /* FAAdaptValueTransformer.m in Sources */,
 				3A9CA17A1A0C59020016860E /* Venue.m in Sources */,
 				3A9CA1791A0C59020016860E /* Genre.m in Sources */,
@@ -337,6 +346,7 @@
 				3A9CA16D1A0C58D50016860E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

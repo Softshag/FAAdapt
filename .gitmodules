@@ -1,0 +1,3 @@
+[submodule "RKValueTransformers"]
+	path = RKValueTransformers
+	url = https://github.com/RestKit/RKValueTransformers.git

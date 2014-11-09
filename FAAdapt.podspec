@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FAAdapt"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Object mapper for objective-c"
 
   s.description  = <<-DESC
@@ -124,6 +124,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "RKValueTransformers", "~> 1.1.0"
 
 end

@@ -62,11 +62,5 @@
       <FileRef
          location = "group:FAPropertyDescription.m">
       </FileRef>
-      <FileRef
-         location = "group:RKValueTransformers.h">
-      </FileRef>
-      <FileRef
-         location = "group:RKValueTransformers.m">
-      </FileRef>
    </Group>
 </Workspace>
