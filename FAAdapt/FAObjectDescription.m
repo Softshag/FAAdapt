@@ -145,7 +145,8 @@
             }
             
             if (innerError != nil) {
-                *error = innerError;
+                if (error != nil)
+                    *error = innerError;
                 break;
             }
             
