@@ -18,7 +18,6 @@ typedef id (^createObjectBlock)(Class class, id value);
 @property (nonatomic, copy) Class destinationClass;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic) BOOL isRequired;
-//@property (nonatomic, copy) createObjectBlock creator;
 
 - (id)mapValue:(id)value error:(NSError **)error;
 
@@ -40,4 +39,5 @@ typedef id (^createObjectBlock)(Class class, id value);
 
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic) BOOL isRequired;
+
 @end
