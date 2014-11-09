@@ -4,6 +4,9 @@
    <FileRef
       location = "group:FAAdaptExample/FAAdaptExample.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:FAAdapt.podspec">
+   </FileRef>
    <Group
       location = "group:FAAdapt"
       name = "FAAdapt">

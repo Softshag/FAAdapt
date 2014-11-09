@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FAAdapt"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Object mapper for objective-c"
 
   s.description  = <<-DESC
@@ -53,9 +53,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Softshag & Me" => "admin@softshag.dk" }
-  # Or just: s.author    = "Softshag & Me"
-  # s.authors            = { "Softshag & Me" => "admin@softshag.dk" }
-  # s.social_media_url   = "http://twitter.com/Softshag & Me"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -89,9 +86,6 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "FAAdapt/**/*.{h,m}"
-  
-
-  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
