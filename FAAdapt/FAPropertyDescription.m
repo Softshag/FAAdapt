@@ -8,7 +8,7 @@
 
 #import "FAPropertyDescription.h"
 #import "FAAdaptValueTransformer.h"
-
+#import "FAAdapt.h"
 
 @implementation FAPropertyDescription
 
@@ -26,7 +26,8 @@
         
         // Should return the converters error
         if (innerError != nil) {
-            *error = innerError;
+            if (error != nil)
+                *error = innerError;
             return nil;
         }
         
@@ -34,16 +35,25 @@
     
     // Should return if the destination class isn't set.
     if (self.destinationClass == nil) {
-        *error = [NSError errorWithDomain:kErrorDomain code:1 userInfo:nil];
+        if (error != nil)
+            *error = [NSError errorWithDomain:kErrorDomain code:1 userInfo:nil];
         return nil;
     }
     
-    if ([newValue isKindOfClass:self.destinationClass]) {
-        return newValue;
-    } else {
+    if (![newValue isKindOfClass:self.destinationClass]) {
         newValue = [FAAdaptValueTransformer transformValue:value toValueOfType:self.destinationClass];
-        return newValue;
     }
+    
+    if (self.isRequired && (newValue == nil || [newValue isKindOfClass:NSNull.class])) {
+        if (error != nil) {
+            *error = [NSError errorWithDomain:kFAAdaptErrorDomain code:REQUIRED userInfo:@{
+              @"field": self.property
+            }];
+        }
+        return nil;
+    }
+    
+    return newValue;
 }
 
 - (FAPropertyDescription *(^)(id (^)(id value, NSError **error)))convert {

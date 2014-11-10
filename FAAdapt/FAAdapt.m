@@ -22,3 +22,6 @@ FAArrayDescription *AdaptArray(id<FADescription> description) {
     FAArrayDescription *desc = [FAArrayDescription descriptionWithDescription:description];
     return desc;
 }
+
+
+NSString *const kFAAdaptErrorDomain = @"com.adapt.error";

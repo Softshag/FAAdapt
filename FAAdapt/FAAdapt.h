@@ -14,7 +14,15 @@
 #import "FAPropertyDescription.h"
 #import "FAObjectDescription+Functions.h"
 
+
+// Methods
 extern FAObjectDescription *AdaptObject(Class klass, NSDictionary *description);
 extern FAPropertyDescription *AdaptProperty(NSString *string);
 extern FAArrayDescription *AdaptArray(id<FADescription> description);
 
+NS_ENUM(int, FAAdaptErrors) {
+    REQUIRED,
+    DESCRIPTOR_OVERFLOW
+};
+
+extern NSString * const kFAAdaptErrorDomain;

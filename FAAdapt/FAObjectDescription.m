@@ -11,6 +11,8 @@
 #import "FAArrayDescription.h"
 #import "FAAdaptPropertyFinder.h"
 
+#import "FAAdapt.h"
+
 
 @interface FAObjectDescription ()
 
@@ -55,7 +57,7 @@
     
     // If no destination class is set infere it.
     if (descriptor.destinationClass == nil) {
-        
+        // Throw an exception if the property does'nt exists on the the target type
         if (![FAAdaptPropertyFinder hasProperty:descriptor.property onClass:self.destinationClass]) {
             @throw [NSException exceptionWithName:@"Property"
                                            reason:[NSString stringWithFormat:@"Property: %@ of wrong type",property]
@@ -70,22 +72,22 @@
 }
 
 - (void)addDescriptionDictionary:(NSDictionary *)dictionary {
-    id<FADescription> d;
+    id<FADescription> descriptor;
     
     for (NSString *key in dictionary.allKeys) {
         id value = dictionary[key];
 
         if ([value isKindOfClass:NSString.class]) {
-            d = [FAPropertyDescription descriptionWithProperty:value class:self.destinationClass];
+            descriptor = [FAPropertyDescription descriptionWithProperty:value class:self.destinationClass];
         
         } else if ([value conformsToProtocol:@protocol(FADescription)]) {
-            d = value;
+            descriptor = value;
         
         } else if ([value isKindOfClass:NSArray.class]) {
             
         }
         
-        [self addDescription:d forProperty:key];
+        [self addDescription:descriptor forProperty:key];
     }
     
 }
@@ -108,7 +110,7 @@
         dictionary = (NSDictionary *)_dictionary;
     } else {
         if (_descriptors.count > 1 || _descriptors.allKeys.count == 0) {
-            *error = [NSError errorWithDomain:kErrorDomain code:1 userInfo:nil];
+            *error = [NSError errorWithDomain:kFAAdaptErrorDomain code:DESCRIPTOR_OVERFLOW userInfo:nil];
             return nil;
         }
         
@@ -121,38 +123,34 @@
     
     
     for (id property in dictionary.allKeys) {
-        @autoreleasepool {
+    
             
-            id value = [dictionary valueForKeyPath:property];
+        id value = [dictionary valueForKeyPath:property];
             
-            id<FADescription> descriptor = [self getDescription:property];
-            NSError *innerError;
-            // Does a descriptor exists for this property
-            if (descriptor == nil) {
+        id<FADescription> descriptor = [self getDescription:property];
+        NSError *innerError;
+            
+        // Does a descriptor exists for this property
+        if (descriptor == nil) {
                 
-                // Should we try yo map any way
-                if (self.shouldMapUndefinedProperties) {
-                    
-                    [self setValue:value withPropertyMapping:property property:property onInstance:instance error:&innerError];
-                } else {
-                    continue;
-                }
-               
+            // Should we try yo map any way
+            if (self.shouldMapUndefinedProperties) {
+                [self setValue:value withPropertyMapping:property property:property onInstance:instance error:&innerError];
             } else {
-                [self setValue:value withDescriptor:descriptor property:property onInstance:instance error:&innerError];
-                
-                
+                continue;
             }
+               
+        } else {
             
-            if (innerError != nil) {
-                if (error != nil)
-                    *error = innerError;
-                break;
-            }
-            
-           
-        }
+            [self setValue:value withDescriptor:descriptor property:property onInstance:instance error:&innerError];
         
+        }
+            
+        if (innerError != nil) {
+            if (error != nil)
+                *error = innerError;
+            break;
+        }
         
     }
     
@@ -172,7 +170,7 @@
     }
     
     if (newValue == nil && descriptor.isRequired) {
-        *error = [NSError errorWithDomain:@"com.adapt.desriptor" code:2 userInfo:@{@"error": @"required",@"field":descriptor.property}];
+        *error = [NSError errorWithDomain:kFAAdaptErrorDomain code:REQUIRED userInfo:@{@"field":[descriptor.property copy]}];
         return false;
     }
     

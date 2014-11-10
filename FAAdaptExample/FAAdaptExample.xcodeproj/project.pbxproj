@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A15CC5B1A10DE1D00312C8C /* concert.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A9CA17B1A0C59100016860E /* concert.json */; };
 		3A2F84521A0F972D000BA744 /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F84501A0F972D000BA744 /* RKValueTransformers.m */; };
 		3A9CA1681A0C58D50016860E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1671A0C58D50016860E /* main.m */; };
 		3A9CA1771A0C59020016860E /* Act.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CA1701A0C59020016860E /* Act.m */; };
@@ -26,12 +27,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		3A9CA1621A0C58D50016860E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				3A15CC5B1A10DE1D00312C8C /* concert.json in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 

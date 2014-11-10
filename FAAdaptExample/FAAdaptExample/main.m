@@ -21,6 +21,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        NSString *current = [[NSFileManager defaultManager] currentDirectoryPath];
+        
+        
         NSString *file = [[NSBundle mainBundle] pathForResource:@"concert" ofType:@"json"];
         
         NSData *data = [NSData dataWithContentsOfFile:file];
