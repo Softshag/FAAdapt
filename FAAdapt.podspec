@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FAAdapt"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Object mapper for objective-c"
 
   s.description  = <<-DESC
