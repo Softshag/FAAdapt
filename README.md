@@ -48,7 +48,7 @@ NSDictionary *dict = @{
 ```objective-c
 
 FAObjectDescription *desc = AdaptObject(Blog.class, @{
-    @"t": @"title",
+    @"t": AdaptProperty(@"title").required(YES),
     @"b": @"body"
 });
 
