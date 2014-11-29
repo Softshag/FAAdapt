@@ -38,9 +38,27 @@ The object to map
 ```objective-c
 
 NSDictionary *dict = @{
+    @"t": @"A title",
+    @"b": @"A body",
+    @"c" : @[@"A comment", @"another comment"]
+};
+
+```
+
+```objective-c
+
+FAObjectDescription *desc = AdaptObject(Blog.class, @{
     @"t": @"title",
     @"b": @"body"
-};
+});
+
+NSError *error;
+Blog *blog = [desc mapValue:dict error:error];
+
+if (!error) {
+    NSLog(@"Title: %@, Body: %@",blog.title, blog.body);
+}
+
 
 ```
 
