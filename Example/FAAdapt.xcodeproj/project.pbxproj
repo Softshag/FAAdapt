@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2434AE1A2A748500B594C9 /* DescriptionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2434AD1A2A748500B594C9 /* DescriptionSpec.m */; };
 		3AF90C191A2A54BB00E38E11 /* PropertyDescriptionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF90C181A2A54BB00E38E11 /* PropertyDescriptionSpec.m */; };
 		3AF90C201A2A563300E38E11 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF90C1C1A2A563300E38E11 /* Address.m */; };
 		3AF90C211A2A563300E38E11 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AF90C1E1A2A563300E38E11 /* person.json */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		35C020B2170B5668E60326FB /* FAAdapt.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FAAdapt.podspec; path = ../FAAdapt.podspec; sourceTree = "<group>"; };
+		3A2434AD1A2A748500B594C9 /* DescriptionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionSpec.m; sourceTree = "<group>"; };
 		3AF90C181A2A54BB00E38E11 /* PropertyDescriptionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyDescriptionSpec.m; sourceTree = "<group>"; };
 		3AF90C1B1A2A563300E38E11 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		3AF90C1C1A2A563300E38E11 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				3AF90C1A1A2A563300E38E11 /* Fixtures */,
 				3AF90C181A2A54BB00E38E11 /* PropertyDescriptionSpec.m */,
+				3A2434AD1A2A748500B594C9 /* DescriptionSpec.m */,
 				3AF90C261A2A5C8200E38E11 /* ArrayDescriptionSpec.m */,
 				3AF90C2E1A2A63C800E38E11 /* ObjectDescription.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
@@ -269,6 +272,7 @@
 				3AF90C2D1A2A60D900E38E11 /* Comment.m in Sources */,
 				3AF90C2F1A2A63C800E38E11 /* ObjectDescription.m in Sources */,
 				3AF90C271A2A5C8200E38E11 /* ArrayDescriptionSpec.m in Sources */,
+				3A2434AE1A2A748500B594C9 /* DescriptionSpec.m in Sources */,
 				3AF90C251A2A565800E38E11 /* Fixtures.m in Sources */,
 				3AF90C201A2A563300E38E11 /* Address.m in Sources */,
 				3AF90C2A1A2A604E00E38E11 /* Blogs.m in Sources */,
