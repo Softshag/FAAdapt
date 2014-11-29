@@ -1,0 +1,11 @@
+{
+    "first_name": "Sherlock",
+    "last_name": "Holms",
+    "age" : 34,
+    "address" : {
+        "street" : "Baker's Street",
+        "city" : "London",
+        "country" : "Britain"
+    },
+    "tags": ["One", "Two"]
+}

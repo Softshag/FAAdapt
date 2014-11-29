@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../Pod/Classes"
+      name = "Classes">
+      <Group
+         location = "group:Adaptors"
+         name = "Adaptors">
+         <FileRef
+            location = "group:FAArrayDescription.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAArrayDescription.m">
+         </FileRef>
+         <FileRef
+            location = "group:FADescription.h">
+         </FileRef>
+         <FileRef
+            location = "group:FADescription.m">
+         </FileRef>
+         <FileRef
+            location = "group:FAObjectDescription.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAObjectDescription.m">
+         </FileRef>
+         <FileRef
+            location = "group:FAPropertyDescription.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAPropertyDescription.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Categories"
+         name = "Categories">
+         <FileRef
+            location = "group:FAObjectDescription+Functions.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAObjectDescription+Functions.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:CoreData"
+         name = "CoreData">
+         <FileRef
+            location = "group:FAEntityDescription.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAEntityDescription.m">
+         </FileRef>
+         <FileRef
+            location = "group:FAPropertyDescription+CoreData.h">
+         </FileRef>
+         <FileRef
+            location = "group:FAPropertyDescription+CoreData.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:FAAdapt.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdapt.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptPropertyFinder.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptPropertyFinder.m">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptValueTransformer.h">
+      </FileRef>
+      <FileRef
+         location = "group:FAAdaptValueTransformer.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:FAAdapt.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

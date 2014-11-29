@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'FAAdapt', :exclusive => true do
+  pod "FAAdapt", :path => "../"
+
+  pod 'Kiwi'
+end

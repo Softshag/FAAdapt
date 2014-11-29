@@ -1,0 +1,22 @@
+PODS:
+  - FAAdapt (0.0.5):
+    - FAAdapt/Core (= 0.0.5)
+  - FAAdapt/Core (0.0.5):
+    - RKValueTransformers (~> 1.1.0)
+  - Kiwi (2.3.1)
+  - RKValueTransformers (1.1.1)
+
+DEPENDENCIES:
+  - FAAdapt (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  FAAdapt:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FAAdapt: 1f3b47dc2d8dcb235c757d5f6de0c05661c97bbf
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+  RKValueTransformers: 67b4ea3eb6a1c1a0b8c3c37eb4e4c05e4febeba2
+
+COCOAPODS: 0.35.0
