@@ -201,5 +201,11 @@
     return [self.destinationClass new];
 }
 
+- (FAObjectDescription *(^)(BOOL map))mapUndefined {
+    return ^(BOOL map) {
+        self.mapUndefinedProperties = map;
+        return self;
+    };
+}
 
 @end

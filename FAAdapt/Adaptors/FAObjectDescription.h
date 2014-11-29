@@ -26,6 +26,8 @@ typedef id (^createObjectBlock)(Class class, id value);
 
 /** Should map undefined properties */
 @property (nonatomic, getter = shouldMapUndefinedProperties) BOOL mapUndefinedProperties;
+@property (nonatomic, copy, readonly) FAObjectDescription * (^mapUndefined)(BOOL map);
+
 
 + (instancetype)descriptionWith:(Class)klass dictionary:(NSDictionary *)dictionary;
 

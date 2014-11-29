@@ -1,3 +1,6 @@
 [submodule "RKValueTransformers"]
 	path = RKValueTransformers
 	url = https://github.com/RestKit/RKValueTransformers.git
+[submodule "FExtension"]
+	path = FExtension
+	url = https://github.com/Softshag/FExtension.git
